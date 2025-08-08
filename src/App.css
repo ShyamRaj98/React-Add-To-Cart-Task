@@ -11,7 +11,9 @@ p{
 .logo,.product-price{
  font-family: "Sedgwick Ave Display", cursive;
 }
-
+button{
+  cursor: pointer;
+}
 .product-title{
    overflow: hidden; 
   text-overflow: ellipsis;
