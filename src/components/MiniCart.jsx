@@ -3,7 +3,7 @@ import { MdDeleteOutline } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
 const MiniCart = ({ cartItems, removeProduct, closeMiniCart, miniCard }) => {
   return (
-    <div className={`mini-cart bg-white transition-all duration-500 ease-in fixed top-0 bottom-0 right-0  ${miniCard ? "w-full md:w-2/5" : "w-0"} z-20`}>
+    <div className={`mini-cart bg-white transition-all duration-500 ease-in fixed top-0 bottom-0 right-0  ${miniCard ? "w-full md:w-2/5" : "w-0"} h-screen z-20`}>
       <div className={`transition-opacity duration-300 linear ${miniCard ? "delay-500 opacity-100" : "opacity-0"}`}>
         <div className="px-3 py-4 flex flex-row items-center justify-between">
           <h2 className="text-lg font-semibold">Cart Items</h2>
@@ -13,10 +13,10 @@ const MiniCart = ({ cartItems, removeProduct, closeMiniCart, miniCard }) => {
           {cartItems.length === 0 ? (
             <p className="font-semibold text-center p-5">Your cart is empty</p>
           ) : (
-            <ul className="px-2 flex flex-col gap-3">
+            <ul className="h-[90vh] px-2 flex flex-col gap-3 overflow-y-scroll">
               {cartItems.map((item) => (
-                <li key={item.id} className="bg-blue-50 flex flex-row items-center justify-center gap-4 rounded-lg shadow-2xl">
-                  <img className="w-1/5 p-5" src={item.image} alt={item.title} />
+                <li key={item.id} className="bg-blue-50 min-h-[100px] flex flex-row items-center justify-center gap-4 rounded-lg shadow-2xl">
+                  <img className="w-1/5 h-full object-contain overflow-hidden" src={item.image} alt={item.title} />
                   <div className="w-4/5 flex flex-row items-center justify-between">
                     <div className="">
                       <h4 className="product-title text-md font-semibold leading-5 mb-2">{item.title}</h4>
