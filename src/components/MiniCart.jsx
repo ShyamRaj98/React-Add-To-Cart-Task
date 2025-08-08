@@ -13,7 +13,7 @@ const MiniCart = ({ cartItems, removeProduct, closeMiniCart, miniCard }) => {
           {cartItems.length === 0 ? (
             <p className="font-semibold text-center p-5">Your cart is empty</p>
           ) : (
-            <ul className="px-2 flex flex-col gap-3 overflow-y-scroll">
+            <ul className="h-[90vh] px-2 flex flex-col gap-3 overflow-y-scroll">
               {cartItems.map((item) => (
                 <li key={item.id} className="bg-blue-50 flex flex-row items-center justify-center gap-4 rounded-lg shadow-2xl">
                   <img className="w-1/5 p-5" src={item.image} alt={item.title} />
